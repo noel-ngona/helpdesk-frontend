@@ -7,7 +7,7 @@ import helpdeskAssistant from '@/assets/images/helpdesk_assistant.jpg'
   <div class="h-screen flex p-5 gap-6">
     <div class="flex-1 justify-center flex flex-col gap-6 px-20">
       <h1 class="text-3xl text-helpdesk-blue font-bold">Welcome to the Helpdesk App</h1>
-      <p class="text-lg text-helpdesk-gray">
+      <p class="text-lg ">
         Get quick support for technical issues and service requests. Log in to track requests, find solutions, and connect with our team.
       </p>
       <form class="flex flex-col gap-6 ">

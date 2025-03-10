@@ -3,6 +3,6 @@
 
 @theme {
   --color-helpdesk-green : oklch(47.04% 0.0749 192.44);
-  --color-helpdesk-blue : #102A43;
-  --color-helpdesk-gray : #0F3D3C;
+  --color-helpdesk-blue : oklch(27.85% 0.0564 249.75);
+  --color-helpdesk-dark-green : oklch(32.94% 0.0485 192.97);
 }
