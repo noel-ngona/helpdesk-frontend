@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import helpdeskAssistant from '@/assets/images/helpdesk_assistant.jpg'
+import Cliploader from 'vue-spinner/src/ClipLoader.vue'
+import { onMounted, reactive } from 'vue'
+
+const state = reactive({
+  isLoading : false,
+})
+
+const handleLogin = () => {
+  state.isLoading = true;
+  console.log(state)
+}
 
 </script>
 
@@ -26,7 +37,10 @@ import helpdeskAssistant from '@/assets/images/helpdesk_assistant.jpg'
           </div>
 
           <!-- Login Button -->
-          <button type="submit" class="w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-700 transition">Login</button>
+          <button type="submit" class="w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-700 transition">
+            <Cliploader class="text-white" v-if="state.isLoading" />
+            <span v-else >Login</span>
+          </button>
         </form>
 
         <!-- Footer Links -->
