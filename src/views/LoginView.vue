@@ -2,15 +2,23 @@
 import helpdeskAssistant from '@/assets/images/helpdesk_assistant.jpg'
 import Cliploader from 'vue-spinner/src/ClipLoader.vue'
 import { onMounted, reactive } from 'vue'
+import {useAuthStore} from '@/stores/auth.ts'
 
+const authStore = useAuthStore()
 const state = reactive({
   isLoading : false,
+  credentials : {
+    username: '',
+    password: ''
+  }
 })
-
-const handleLogin = () => {
+const store = useAuthStore()
+const handleLogin = async () => {
   state.isLoading = true;
-  console.log(state)
+  await authStore.login(state.credentials);
+  state.isLoading = false;
 }
+
 
 </script>
 
@@ -27,13 +35,13 @@ const handleLogin = () => {
           <!-- Email Field -->
           <div class="mb-4">
             <label for="email" class="block font-medium mb-2">Email</label>
-            <input type="email" id="email" v-model="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Enter your email" required>
+            <input type="text" id="email" v-model="state.credentials.username" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Enter your email" required>
           </div>
 
           <!-- Password Field -->
           <div class="mb-4">
             <label for="password" class="block font-medium mb-2">Password</label>
-            <input type="password" id="password" v-model="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Enter your password" required>
+            <input type="password" id="password" v-model="state.credentials.password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Enter your password" required>
           </div>
 
           <!-- Login Button -->
