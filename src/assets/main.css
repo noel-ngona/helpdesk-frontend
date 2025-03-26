@@ -1,8 +1,14 @@
 
 @import "tailwindcss";
 
+@font-face {
+  font-family: "helpdesk-font";
+  src: url("./fonts/PTSans-Regular.ttf");
+}
 @theme {
   --color-helpdesk-green : oklch(47.04% 0.0749 192.44);
   --color-helpdesk-blue : oklch(27.85% 0.0564 249.75);
   --color-helpdesk-dark-green : oklch(32.94% 0.0485 192.97);
+  --font-secondary: "helpdesk-font", helvetica, arial, sans-serif;
+
 }
