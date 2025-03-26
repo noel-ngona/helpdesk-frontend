@@ -5,8 +5,8 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <aside class="w-64 bg-slate-50  flex flex-col">
-    <div class="p-4 text-xl font-bold border-b border-gray-700">
-      Admin Panel
+    <div class="p-4 text-xl font-bold ">
+      Helpdesk
     </div>
     <nav class="flex-1 p-4 space-y-2">
       <RouterLink href="/" class="block py-2 px-4 rounded-xl hover:bg-cyan-600 hover:text-slate-50 flex gap-2" :class="{ 'bg-cyan-600 text-stone-50': $route.path === '/' }">
@@ -37,7 +37,7 @@ import { RouterLink } from 'vue-router'
         </div>
       </RouterLink>
     </nav>
-    <div class="p-4 border-t border-gray-700">
+    <div class="p-4 ">
       <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700">Logout</a>
     </div>
   </aside>
