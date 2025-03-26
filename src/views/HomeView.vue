@@ -2,6 +2,7 @@
 import {useAuthStore} from '@/stores/auth.ts'
 import { RouterLink} from 'vue-router'
 import Sidebar from '@/components/Sidebar.vue'
+import Navbar from '@/components/Navbar.vue'
 
 const store = useAuthStore();
 const handleLogOut = async () => {
@@ -17,13 +18,7 @@ const handleLogOut = async () => {
         <!-- Main Content -->
         <div class="flex-1 flex flex-col">
             <!-- Top Navbar -->
-            <header class="bg-slate-50  px-6 py-4 flex justify-between items-center">
-                <h1 class="text-xl font-semibold">Dashboard</h1>
-                <div class="flex items-center space-x-4">
-                    <span class="text-gray-700">Admin</span>
-                    <button class="bg-gray-800 text-white px-4 py-2 rounded">Profile</button>
-                </div>
-            </header>
+            <Navbar />
 
             <!-- Page Content -->
             <main class="p-6 flex-1 overflow-auto">
