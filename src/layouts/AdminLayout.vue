@@ -4,10 +4,7 @@ import { RouterLink} from 'vue-router'
 import Sidebar from '@/components/Sidebar.vue'
 import Navbar from '@/components/Navbar.vue'
 
-const store = useAuthStore();
-const handleLogOut = async () => {
-  await store.logout()
-}
+
 </script>
 
 <template>

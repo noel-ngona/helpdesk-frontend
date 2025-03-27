@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Avatar from '@/assets/images/Leonardo_Kino_XL_A_professional_picture_of_a_black_person_1.jpg'
+
 </script>
 
 <template>
